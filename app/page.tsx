@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import FocusPanel from "./focus-panel";
+import SmoothScrollLink from "./smooth-scroll-link";
 
 type IconName =
   | "briefcase"
@@ -173,32 +174,32 @@ const workflow = [
 
 export default function Home() {
   return (
-    <main className="portfolio-page">
+    <main id="top" className="portfolio-page">
       <div className="ambient ambient-a" aria-hidden />
       <div className="ambient ambient-b" aria-hidden />
       <div className="ambient ambient-c" aria-hidden />
 
       <header className="section-shell top-nav">
-        <a href="#" className="brand">
+        <SmoothScrollLink href="#top" className="brand">
           <Image src="/logo.png" alt="Gor Hunanyan logo" width={120} height={34} priority />
-        </a>
+        </SmoothScrollLink>
         <nav aria-label="Primary navigation">
-          <a href="#projects">
+          <SmoothScrollLink href="#projects">
             <Icon name="target" className="icon icon-nav" />
             Projects
-          </a>
-          <a href="#focus">
+          </SmoothScrollLink>
+          <SmoothScrollLink href="#focus">
             <Icon name="layers" className="icon icon-nav" />
             Focus
-          </a>
-          <a href="#approach">
+          </SmoothScrollLink>
+          <SmoothScrollLink href="#approach">
             <Icon name="compass" className="icon icon-nav" />
             Approach
-          </a>
-          <a href="#contact">
+          </SmoothScrollLink>
+          <SmoothScrollLink href="#contact">
             <Icon name="mail" className="icon icon-nav" />
             Contact
-          </a>
+          </SmoothScrollLink>
         </nav>
       </header>
 
@@ -221,14 +222,14 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary">
+              <SmoothScrollLink href="#projects" className="btn btn-primary">
                 <Icon name="target" className="icon icon-btn" />
                 View Projects
-              </a>
-              <a href="#contact" className="btn btn-ghost">
+              </SmoothScrollLink>
+              <SmoothScrollLink href="#contact" className="btn btn-ghost">
                 <Icon name="mail" className="icon icon-btn" />
                 Contact
-              </a>
+              </SmoothScrollLink>
             </div>
           </div>
 
