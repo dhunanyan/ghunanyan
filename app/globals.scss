@@ -774,6 +774,7 @@ a {
 
   .hero-visual {
     justify-content: center;
+    order: -1;
   }
 
   .profile-frame {
@@ -790,27 +791,20 @@ a {
   }
 
   .top-nav .brand {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .top-nav nav {
     width: 100%;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    padding-bottom: 0.1rem;
-  }
-
-  .top-nav nav::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.34rem;
   }
 
   .top-nav nav a {
     font-size: 0.84rem;
-    padding: 0.44rem 0.66rem;
-    flex: 0 0 auto;
+    padding: 0.5rem 0.48rem;
+    justify-content: center;
   }
 
   .project-grid,
@@ -946,9 +940,13 @@ a {
   }
 
   .top-nav nav a {
-    font-size: 0.8rem;
-    padding: 0.42rem 0.56rem;
-    gap: 0.28rem;
+    font-size: 0.78rem;
+    padding: 0.46rem 0.36rem;
+    gap: 0.22rem;
+  }
+
+  .top-nav nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section-head h2 {
