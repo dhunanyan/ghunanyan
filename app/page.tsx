@@ -19,6 +19,7 @@ type IconName =
   | "mail"
   | "phone"
   | "linkedin"
+  | "file"
   | "arrow";
 
 function Icon({
@@ -97,6 +98,12 @@ function Icon({
       <>
         <rect x="3" y="3" width="18" height="18" rx="4" />
         <path d="M8 10v7M8 7.5v.01M12 17v-4a2 2 0 0 1 4 0v4" />
+      </>
+    ),
+    file: (
+      <>
+        <path d="M8 3h6l4 4v14H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+        <path d="M14 3v5h5M9 13h6M9 17h6" />
       </>
     ),
     arrow: <path d="M5 12h14m-5-5 5 5-5 5" />,
@@ -181,7 +188,13 @@ export default function Home() {
 
       <header className="section-shell top-nav">
         <SmoothScrollLink href="#top" className="brand">
-          <Image src="/logo.png" alt="Gor Hunanyan logo" width={120} height={34} priority />
+          <Image
+            src="/logo.png"
+            alt="Gor Hunanyan logo"
+            width={120}
+            height={34}
+            priority
+          />
         </SmoothScrollLink>
         <nav aria-label="Primary navigation">
           <SmoothScrollLink href="#projects">
@@ -230,6 +243,15 @@ export default function Home() {
                 <Icon name="mail" className="icon icon-btn" />
                 Contact
               </SmoothScrollLink>
+              <a
+                href="/cv-english.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                <Icon name="file" className="icon icon-btn" />
+                View CV
+              </a>
             </div>
           </div>
 
